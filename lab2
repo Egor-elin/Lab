@@ -1,0 +1,4 @@
+adjacent_elements(X, Y, [X,Y|_]).
+adjacent_elements(X, Y, [Y,X|_]).
+adjacent_elements(X, Y, [_|Tail]) :-
+    adjacent_elements(X, Y, Tail).
