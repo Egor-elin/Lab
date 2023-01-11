@@ -23,7 +23,7 @@ treant:-
     verify(stan).
 
 input(Question):-
-write('would you like a'),
+write('would you like a '),
 write(Question),
 write('? '),
 read(output),
@@ -35,8 +35,8 @@ assert(no(Question)), fail).
 
 :- dynamic yes/1 , no/1.
 verify(Order):-
-(yes(Order):-
-
+(yes(Order)
+->  
 true;
 (no(Order)
 ->
