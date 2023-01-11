@@ -1,12 +1,12 @@
 go:- hypothesis(Disease),
 write('a hero with such characteristics:'),
-write('Disease'),
+write(Disease),
 nl,
 undo.
 
-hypothesis(dazzle):- dazzle, !
-hypothesis(void):- faceless void, !
-hypothesis(treant):- treant protector, !
+hypothesis(dazzle):-dazzle, !.
+hypothesis(void):-void, !.
+hypothesis(treant):-treant, !.
 hypothesis(unknown).
 
 dazzle:-
@@ -36,7 +36,7 @@ assert(no(Question)), fail).
 :- dynamic yes/1 , no/1.
 verify(Order):-
 (yes(Order):-
-->
+
 true;
 (no(Order)
 ->
